@@ -12,4 +12,4 @@ def taccounts(request):
 
 def matter_list(request):
     matters = Matter.objects.all()
-    return render(request, 'faultsapp/matter_list.html')
+    return render(request, 'faultsapp/matter_list.html', {'matters': matters})
