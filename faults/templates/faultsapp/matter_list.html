@@ -1,0 +1,13 @@
+{% extends "mainpage.html" %}
+
+{%block content%}
+
+<div class="container" style="width: 50%;">
+<h1>Matter List</h1>
+    <ol>
+        {% for matter in matters %}
+            <li>{{ matter.logohead }} - {{ matter.logocust }} - {{ matter.whom }} - {{ matter.logodate }} - {{ matter.logopack }}</li>
+        {% endfor %}
+    </ol>
+
+{%endblock%}

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Matter
 
 
 def tfaults(request):
@@ -7,3 +8,8 @@ def tfaults(request):
 
 def taccounts(request):
     return render(request, 'faultsapp/tAccounts.html')
+
+
+def matter_list(request):
+    matters = Matter.objects.all()
+    return render(request, 'faultsapp/matter_list.html')
